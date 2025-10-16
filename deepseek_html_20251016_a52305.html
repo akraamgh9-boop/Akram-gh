@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAMIR AKRAM - Technicien Audio</title>
+    <style>
+        /* === MODERN DARK THEME - PERFECT FOR AUDIO === */
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #ff6b00;
+            --accent: #00a8ff;
+            --text: #ffffff;
+            --text-secondary: #b0b0b0;
+            --card-bg: #2d2d2d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d2d2d 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--secondary);
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero h2 {
+            font-size: 1.8em;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 1.1em;
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(45, 45, 45, 0.95);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: var(--secondary);
+        }
+        
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #444;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.2);
+        }
+        
+        .project-card h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .project-meta {
+            color: var(--accent);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .project-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .project-card li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .project-card li:before {
+            content: "🎧";
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .skill-category {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #444;
+        }
+        
+        .skill-category h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        /* Contact */
+        .contact-info {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--card-bg);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            border-top: 1px solid #444;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5em; }
+            .hero h2 { font-size: 1.4em; }
+            nav ul { gap: 20px; flex-wrap: wrap; }
+            section { padding: 50px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="hero">
+        <h1>CHAMIR AKRAM</h1>
+        <h2>TECHNICIEN SPÉCIALISÉ EN AUDIO-VISUEL (SON)</h2>
+        <p>Passionné par l'univers du son, je maîtrise les rouages techniques de la prise de son pour le cinéma et la télévision. Expérimenté dans divers projets allant du long métrage aux court-métrages.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#projects">PROJETS</a></li>
+            <li><a href="#about">À PROPOS</a></li>
+            <li><a href="#skills">COMPÉTENCES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">MES PROJETS</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <h3>FATWA - Long Métrage</h3>
+                <div class="project-meta">APOSTROPHE FILMS • Dec 2024 - Jan 2025</div>
+                <ul>
+                    <li>Participation au tournage en tant qu'assistant opérateur son</li>
+                    <li>Collaboration avec l'équipe technique sur la gestion des enregistrements audio</li>
+                    <li>Assistant Opérateur de Prise de Son (Stagiaire)</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>AICHA - Court-Métrage</h3>
+                <div class="project-meta">NATIVE LINE • Sept 2024</div>
+                <ul>
+                    <li>Appui technique lors des prises de son sur le plateau</li>
+                    <li>Contribution aux tâches créatives et logistiques liées à la production audio</li>
+                    <li>Assistant de Son (Stagiaire)</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>L'ARTISTE - Court-Métrage</h3>
+                <div class="project-meta">TAMATART VISION • Nov 2023</div>
+                <ul>
+                    <li>Prise de son et assistance technique durant le tournage</li>
+                    <li>Gestion des équipements audio et collaboration avec l'équipe de réalisation</li>
+                    <li>Stagiaire Prise de Son</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>ALC AY - Série</h3>
+                <div class="project-meta">MPROD • Nov 2024</div>
+                <ul>
+                    <li>Assistance à l'opérateur son pendant les séquences de tournage</li>
+                    <li>Vérification des enregistrements et maintenance du matériel audio</li>
+                    <li>Assistant Opérateur de Prise de Son (Stagiaire)</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>LOTFI NHILA - Mini-Série</h3>
+                <div class="project-meta">OSTUDIO • Mars 2022</div>
+                <ul>
+                    <li>Participation active à la captation sonore en conditions réelles de tournage</li>
+                    <li>Préparation et rangement des équipements techniques</li>
+                    <li>Assistant Opérateur de Prise de Son</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>MAMA AROUSSA - Téléfilm</h3>
+                <div class="project-meta">NELMO PRODUCTION • Nov 2024</div>
+                <ul>
+                    <li>Support technique pour la prise de son</li>
+                    <li>Gestion des micros et enregistrements</li>
+                    <li>Assistant Opérateur de Prise de Son (Stagiaire)</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">À PROPOS DE MOI</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.2em; margin-bottom: 30px; color: var(--text-secondary);">
+                Technicien spécialisé en Audio-Visuel option Son, diplômé de l'OFPPT ISIC AIN BORJA. 
+                Passionné par la qualité sonore et expérimenté sur divers plateaux de tournage avec des sociétés de production renommées.
+            </p>
+            
+            <div style="background: var(--card-bg); padding: 30px; border-radius: 10px; border: 1px solid #444;">
+                <h3 style="color: var(--secondary); margin-bottom: 20px;">PARCOURS SCOLAIRE</h3>
+                <div style="text-align: left; max-width: 500px; margin: 0 auto;">
+                    <p><strong>2019-2021:</strong> OFPPT ISIC AIN BORJA - Technicien spécialisé en AUDIO VISUEL option SON</p>
+                    <p><strong>2019:</strong> LYCÉE EDDAKHLA - Baccalauréat en Sciences de la vie et la terre</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">MES COMPÉTENCES</h2>
+        <div class="skills-container">
+            
+            <div class="skill-category">
+                <h3>🎚️ TECHNICAL SKILLS</h3>
+                <ul>
+                    <li>Adobe Audition</li>
+                    <li>Pro Tools</li>
+                    <li>Microsoft Office</li>
+                    <li>Traitement acoustique</li>
+                    <li>Gestion microphones</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>🎬 AUDIO EXPERTISE</h3>
+                <ul>
+                    <li>Prise de son professionnelle</li>
+                    <li>Enregistrement sur plateau</li>
+                    <li>Gestion équipements audio</li>
+                    <li>Maintenance technique</li>
+                    <li>Contrôle qualité audio</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>💼 SOFT SKILLS</h3>
+                <ul>
+                    <li>Esprit d'équipe</li>
+                    <li>Curiosité technique</li>
+                    <li>Autonomie</li>
+                    <li>Réactivité</li>
+                    <li>Adaptabilité</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>🌐 LANGUES</h3>
+                <ul>
+                    <li>Arabe: Maternelle</li>
+                    <li>Français: Bilingue</li>
+                    <li>Anglais: Courant</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">CONTACT</h2>
+        <div class="contact-info">
+            <p style="font-size: 1.3em; margin-bottom: 20px;">
+                📧 <a href="mailto:akraamgh9@gmail.com">akraamgh9@gmail.com</a>
+            </p>
+            <p style="font-size: 1.3em; margin-bottom: 20px;">
+                📱 <a href="tel:+212684552652">+212 684-552652</a>
+            </p>
+            <p style="color: var(--text-secondary);">
+                Res Echaraf GH5 IMM01, Sidi Moumen<br>
+                Casablanca, Maroc
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 CHAMIR AKRAM - Technicien Spécialisé en Audio-Visuel (Son)</p>
+        <p style="color: var(--text-secondary); margin-top: 10px;">Portfolio Professionnel</p>
+    </footer>
+
+</body>
+</html>
